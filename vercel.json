@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "index.html",
+      "src": "pawcoins.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/pawcoins.html"
     }
   ]
 }
