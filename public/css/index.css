@@ -8,6 +8,13 @@ body {
     color: #333;
     line-height: 1.6;
   }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   
   .navbar {
     background-color: #2b4d3f;
@@ -405,5 +412,79 @@ body {
       grid-template-columns: 1fr;
     }
   }
-  
+
+/* Par défaut, le menu est visible sur les grands écrans */
+/* Navbar fixée en haut */
+.navbar {
+  position: fixed;   /* La navbar reste fixe */
+  top: 0;            /* Positionnée en haut de l'écran */
+  left: 0;           /* Prend toute la largeur de l'écran */
+  width: 100%;       /* Largeur complète de l'écran */
+  z-index: 1000;     /* S'assurer que la navbar est au-dessus des autres éléments */
+  background-color: #2b4d3f; /* La couleur de fond de la navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la navbar */
+  padding: 10px 20px; /* Ajout de padding pour espacer le contenu */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pour que le contenu de la page ne soit pas caché sous la navbar */
+body {
+  padding-top: 60px;  /* Ajuste selon la hauteur de ta navbar */
+}
+
+/* Reste des styles inchangés */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c3e4cd;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      width: 100%;
+      background-color: #2b4d3f;
+      text-align: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .nav-links.active {
+      display: block;
+  }
+}
+
   

@@ -19,3 +19,8 @@ document.querySelector('.prev').addEventListener('click', () => showSlide(index 
 setInterval(() => {
   showSlide(index + 1);
 }, 5000);
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('active'); // Ajoute ou enlève la classe 'active' qui affiche le menu
+});
