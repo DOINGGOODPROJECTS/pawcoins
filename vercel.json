@@ -1,15 +1,12 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "dist/pawcoins/**/*",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "ng build --prod"
+      }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "outputDirectory": "dist/pawcoins"
 }
