@@ -119,13 +119,26 @@
         <h2>Join the PawCoins adventure</h2>
         <p>Transform your zoo into a digital and interactive destination. Give your visitors a new way to engage.</p>
       </div>
-      <a href="#" class="btn">Invite my zoo to join</a>
+      <a href="#" class="btn" id="inviteBtn">Invite my zoo to join</a>
     </div>
   </section>
   
   <section class="section" style="text-align: center;">
     <a href="#" class="btn soon-btn">🚀 Launch App (Soon)</a>
   </section>
+
+  <!-- Modal -->
+  <div id="inviteModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Invite your zoo to join PawCoins</h2>
+      <form id="inviteForm" action="mailto:team@adinkrafellowship.com" method="POST" enctype="text/plain">
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
   
   <footer>
     &copy; 2025 PawCoins. All rights reserved. Made with 🐾 for animal lovers.
