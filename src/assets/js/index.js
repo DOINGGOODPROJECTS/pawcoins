@@ -51,3 +51,18 @@ window.onclick = function(event) {
   }
 }
 
+// Submit form function with redirection
+function submitForm(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  var message = document.getElementById("message").value;
+  var mailtoLink = "mailto:team@adinkrafellowship.com?subject=Zoo Invitation&body=" + encodeURIComponent(message);
+
+  // Simulate sending the email by opening the mailto link
+  window.location.href = mailtoLink;
+
+  // Redirect to PawCoins site after submission
+  window.location.href = "https://pawcoins.vercel.app";
+}
+
+
